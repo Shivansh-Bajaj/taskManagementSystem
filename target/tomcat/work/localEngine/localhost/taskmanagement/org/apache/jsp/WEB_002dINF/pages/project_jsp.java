@@ -99,7 +99,7 @@ public final class project_jsp extends org.apache.jasper.runtime.HttpJspBase
     // /WEB-INF/pages/project.jsp(9,0) name = method type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
     _jspx_th_form_005fform_005f0.setMethod("POST");
     // /WEB-INF/pages/project.jsp(9,0) name = action type = null reqTime = true required = false fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-    _jspx_th_form_005fform_005f0.setAction("addProject");
+    _jspx_th_form_005fform_005f0.setAction("/user/projects/{proID}/addTask/");
     int[] _jspx_push_body_count_form_005fform_005f0 = new int[] { 0 };
     try {
       int _jspx_eval_form_005fform_005f0 = _jspx_th_form_005fform_005f0.doStartTag();

@@ -57,7 +57,18 @@ public final class userInfo_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("</head>\n");
       out.write("<body>\n");
       out.write("<h2>User Info</h2>\n");
-      out.write("<div><a href=\"/taskmanagement/createProject\">Create Project</a>\n");
+      out.write("<div><a href=\"/taskmanagement/createProject/\">Create Projects</a>\n");
+      out.write("<div><a href=\"/taskmanagement/user/projects/\">your Projects</a>\n");
+      out.write("<div><a href=\"/taskmanagement/user/search\">search Projects</a>\n");
+      out.write("<div align=\"right\">\n");
+      out.write("  <c:if test=\"");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${pageContext.request.userPrincipal.name != null}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+      out.write("\">\n");
+      out.write("     User Info : ");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate("${pageContext.request.userPrincipal.name}", java.lang.String.class, (PageContext)_jspx_page_context, null, false));
+      out.write("\n");
+      out.write("         | <a href=\"<c:url value=\"/logout\" />\" >Logout</a>  \n");
+      out.write("  </c:if></div> \n");
       out.write("</body>\n");
       out.write("</html>");
     } catch (Throwable t) {

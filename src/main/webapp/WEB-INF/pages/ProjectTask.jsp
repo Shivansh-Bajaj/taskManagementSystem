@@ -4,11 +4,11 @@
 <html>
 <head><title>${title}</title></head>
 <body>
-<div align="center"><h2>your Created Project<h2>
+<div align="center"><h2>your Created Project</h2></div>
 <table border="1">
-  <c:forEach items="${project}" var="item">
+  <c:forEach items="${task}" var="item">
     <tr>
-      <td><a href="${item.project_id}"+"/"><c:out value="${item.title}" /></a></td>
+      <td><a href="/user/projects/${projectID}/Task/${item.task_id}/"><c:out value="${item.title}" /></a></td>
     </tr>
   </c:forEach>
 </table>

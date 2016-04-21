@@ -19,8 +19,9 @@ public class ProjectDAOimpl implements projectDAO{
 			String sql = "INSERT INTO t_Project(project_StartDate,project_lastDate,user_title,detail,createdBy) VALUES (?,?,?,?,?);";
 	        JdbcTemplate jdbcTemplate=new JdbcTemplate(myDataSource);
 	        jdbcTemplate.update(sql, new Object[] { pro.getStartDate(),pro.getEndDate(),pro.title,pro.getDetail(),pro.getCreatedBy()});
-	        System.out.println(sql);
+	        System.out.println();
 		}
+		
 
 	public List<Project> getProject(int proID) {
 		 String sql = "SELECT * FROM t_Project where project_id="+proID;
@@ -30,7 +31,7 @@ public class ProjectDAOimpl implements projectDAO{
 	}
 	
 	public List<Project> getProjectByUser(String User) {
-		String sql = "SELECT * FROM t_Project where t_Project.project_id=userToProject.projectID and userToProject.user_name="+"'"+User+"'";
+		String sql = "SELECT * FROM t_Project where CreatedBy="+"'"+User+"'";
 		JdbcTemplate jdbcTemplate=new JdbcTemplate(myDataSource);
 		List<Project> items = (List<Project>) jdbcTemplate.query(sql,(RowMapper<Project>) ( new ProjectDAORowMapper()));
 	    return items;

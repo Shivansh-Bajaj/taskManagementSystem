@@ -28,19 +28,13 @@ public class taskDAOimpl implements taskDAO{
 		 List<task> items = (List<task>) jdbcTemplate.queryForObject(sql,new Object[]{taskID}, new taskDAORowMapper());
 	    return items;
 	}
-	public List<task> gettasksByProjectID(int proID,String Status) {
+	
+	
+	public List<task> getTask(int proID, String Status) {
 		 String sql = "SELECT * FROM t_task where project_id=? and status=?";
 		 JdbcTemplate jdbcTemplate=new JdbcTemplate(myDataSource);
 		 List<task> items = (List<task>) jdbcTemplate.queryForObject(sql,new Object[]{proID,Status}, new taskDAORowMapper());
 	    return items;
-	}
-	public task getTaskDetail(int taskID) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	public List<task> getTask(int proID, String Status) {
-		// TODO Auto-generated method stub
-		return null;
 	}
 }
 

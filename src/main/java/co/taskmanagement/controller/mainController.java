@@ -59,7 +59,7 @@ public class mainController {
 	      return "logoutSuccessfullPage";
 	  }
 	/////user info page/////
-	@RequestMapping(value = "/user/", method = RequestMethod.GET)
+	@RequestMapping(value = "/user", method = RequestMethod.GET)
 	  public String loginPage(Model model, Principal principal) {
 	      model.addAttribute("title", "User Info");
 	      String userName = principal.getName();
@@ -71,9 +71,12 @@ public class mainController {
 	      model.addAttribute("title", "User Info");
 	      String userName = principal.getName();
 	      System.out.println("add projectID");
+	      model.addAttribute(userName);
 	      model.addAttribute("project",pro.getProjectByUser(userName));
 	      return "userInfoPage";
 	  }
+//	@RequestMapping(value= "/user/search/", method=RequestMethod.GET)
+//	public string search()
 	@RequestMapping(value= "/createProject", method= RequestMethod.GET)
 	public ModelAndView createProject(){
 		return new ModelAndView("project","command",new Project());
@@ -84,29 +87,32 @@ public class mainController {
 		pro.insertData(project);
 		return "redirect:/user/";
 	}
-	@RequestMapping(value= "/user/{ProID}/",method = RequestMethod.GET)
+	@RequestMapping(value= "/user/projects/{ProID}",method = RequestMethod.GET)
 	public String projectInfo(@PathVariable("ProID") int ProID,Model model){
 		model.addAttribute("project", pro.getProject(ProID));
 		return "ProjectInfo";
 	}
-	@RequestMapping(value= "/user/{ProID}/{status}/",method = RequestMethod.GET)
+	@RequestMapping(value= "/user/projects/{ProID}/{status}/",method = RequestMethod.GET)
 	public String projectTask(@PathVariable("ProID") int ProID,@PathVariable("status") String Status,Model model){
 		model.addAttribute("task", Task.getTask(ProID,Status));
-		return "projectTask";
+		model.addAttribute("projectID", ProID);
+		model.addAttribute("Status", Status);
+		return "ProjectTask";
 	}
 	//////task URL/////
-	@RequestMapping(value= "{proID}/Task/", method= RequestMethod.GET)
-	public ModelAndView addTask(@PathVariable("ProID") int ProID){
-		return new ModelAndView("task","command",new Project());
+	@RequestMapping(value= "/user/projects/{proID}/Task/", method= RequestMethod.GET)
+	public ModelAndView addTask(@PathVariable("proID") int ProID,Model model){
+		return new ModelAndView("task","command",new task());
 	}
-	@RequestMapping(value= "{proID}/addTask/", method= RequestMethod.POST)
-	public String addProject(@PathVariable("ProID") int ProID,@ModelAttribute("SpringWeb")task TASK,ModelMap model){
+	@RequestMapping(value= "/user/projects/{proID}/Task/addTask/", method= RequestMethod.POST)
+	public String addProject(@PathVariable("proID") int ProID,@ModelAttribute("SpringWeb")task TASK,ModelMap model){
+		System.out.println(ProID);
 		Task.insertData(TASK);
-		return "redirect:/user/"+ProID+"/" ;
+		return "redirect:/user/projects/"+ProID+"/" ;
 	}
-	@RequestMapping(value= "/user/{ProID}/{taskID}/",method = RequestMethod.GET)
-	public String projectInfo(@PathVariable("ProID") int ProID,@PathVariable("ProID") int taskID,Model model){
-		model.addAttribute("taskDetail", Task.getTaskDetail(taskID));
+	@RequestMapping(value= "/user/projects/{ProID}/Task/{taskID}/",method = RequestMethod.GET)
+	public String projectInfo(@PathVariable("ProID") int ProID,@PathVariable("taskID") int taskID,Model model){
+		model.addAttribute("taskDetail", Task.gettaskDetail(taskID));
 		model.addAttribute("comment", com.getCommentsByProjectID(taskID));
 		return "taskInfo";
 	}

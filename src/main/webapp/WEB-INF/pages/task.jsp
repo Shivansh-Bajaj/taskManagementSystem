@@ -6,7 +6,7 @@
 <body>
 <div align="center">
 <h2>Add project</h2>
-<form:form method="POST" action="/user/projects/{proID}/addTask/">
+<form:form method="POST" action="addTask/">
    <table border="4">
     <tr>
         <td><form:label path="createdBy">your User name</form:label></td>
@@ -26,6 +26,11 @@
     </tr>
     <tr>
         <td><form:label path="title">title</form:label></td>
+        <td><form:input path="title" /></td>
+    </tr>
+    
+    <tr>
+        <td><form:label path="title">assignTo</form:label></td>
         <td><form:input path="title" /></td>
     </tr>
     <tr>
