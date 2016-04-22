@@ -38,7 +38,7 @@ public class ProjectDAOimpl implements projectDAO{
 	}
 
 	public List<Project> searchProject(String name) {
-		String sql = "SELECT * FROM t_Project where user_title="+"'"+name+"'";
+		String sql = "SELECT * FROM t_Project where user_title like"+"'%"+name+"%'";
 		JdbcTemplate jdbcTemplate=new JdbcTemplate(myDataSource);
 		List<Project> items = (List<Project>) jdbcTemplate.query(sql,(RowMapper<Project>) ( new ProjectDAORowMapper()));
 	    return items;

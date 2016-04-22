@@ -9,19 +9,18 @@
              <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" ></script> 
              <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> </head>
 <body>
- <div align="right">
+<div align="right">
   <c:if test="${pageContext.request.userPrincipal.name != null}">
      User Info : ${pageContext.request.userPrincipal.name}
          | <a href="<c:url value="/logout" />" >Logout</a>  
   </c:if></div> 
   <div align="center"><h2>search result<h2>
 
-  <c:forEach items="${task}" var="item">
+  <c:forEach items="${searchResult}" var="item">
     
-  <a href="../Task/${item.task_id}/"><c:out value="${item.title}" /><div class="alert alert-warning"><c:out value="${item.title}" /></div></a>
+  <a href="/taskmanagement/user/projects/${item.project_id}"+"/"><div class="alert alert-warning"><c:out value="${item.title}" /></div></a>
     
   </c:forEach>
 <div>
-  
 </body>
 </html>

@@ -18,9 +18,9 @@ public class commentDAOimpl implements commentDAO{
 	}
 
 	public List<comment> getCommentsByProjectID(int taskID) {
-		 String sql = "SELECT * FROM t_comment where task_id=?";
+		 String sql = "SELECT * FROM t_comment where task_id="+taskID;
 		 JdbcTemplate jdbcTemplate=new JdbcTemplate(myDataSource);
-		 List<comment> items = (List<comment>) jdbcTemplate.queryForObject(sql,new Object[]{taskID}, new commentDAORowMapper());
+		 List<comment> items = (List<comment>) jdbcTemplate.query(sql, new commentDAORowMapper());
 	    return items;
 	}
 }

@@ -6,7 +6,7 @@
 <body>
 <div align="center">
 <h2>Add project</h2>
-<form:form method="POST" action="/user/projects/{proID}/addTask/">
+<form:form method="POST" action="/taskmanagement/addProject/">
    <table border="4">
     <tr>
         <td><form:label path="createdBy">your User name</form:label></td>

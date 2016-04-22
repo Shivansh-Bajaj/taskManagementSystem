@@ -10,6 +10,21 @@ public class task {
 	public String detail;
 	public String title;
 	public String status;
+	public int project_id;
+	public String assignTo;
+	
+	public String getAssignTo() {
+		return assignTo;
+	}
+	public void setAssignTo(String assignTo) {
+		this.assignTo = assignTo;
+	}
+	public int getProject_id() {
+		return project_id;
+	}
+	public void setProject_id(int i) {
+		this.project_id = i;
+	}
 	public int getTask_id() {
 		return task_id;
 	}

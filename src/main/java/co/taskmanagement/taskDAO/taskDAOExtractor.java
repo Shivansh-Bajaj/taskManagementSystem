@@ -12,8 +12,11 @@ public class taskDAOExtractor {
 		item.setEndDate(resultSet.getDate(3));
 		item.setTitle(resultSet.getString(4));
 		item.setDetail(resultSet.getString(5));
-		item.setStatus(resultSet.getString(6));
-		item.setCreatedBy(resultSet.getString(7));
+		item.setCreatedBy(resultSet.getString(6));
+		item.setStatus(resultSet.getString(7));
+		item.setAssignTo(resultSet.getString(8));
+		item.setProject_id(resultSet.getInt(9));
+		
 		return item;
 
 	}

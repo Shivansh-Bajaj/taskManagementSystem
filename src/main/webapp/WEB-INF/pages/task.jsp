@@ -28,10 +28,14 @@
         <td><form:label path="title">title</form:label></td>
         <td><form:input path="title" /></td>
     </tr>
+    <tr>
+        <td><form:label path="status">Status("todo","wip","done")</form:label></td>
+        <td><form:input path="status" /></td>
+    </tr>
     
     <tr>
-        <td><form:label path="title">assignTo</form:label></td>
-        <td><form:input path="title" /></td>
+        <td><form:label path="assignTo">assignTo</form:label></td>
+        <td><form:input path="assignTo" /></td>
     </tr>
     <tr>
         <td colspan="2">

@@ -157,7 +157,6 @@ public final class task_jsp extends org.apache.jasper.runtime.HttpJspBase
             return true;
           out.write("</td>\n");
           out.write("    </tr>\n");
-          out.write("    \n");
           out.write("    <tr>\n");
           out.write("        <td>");
           if (_jspx_meth_form_005flabel_005f5(_jspx_th_form_005fform_005f0, _jspx_page_context, _jspx_push_body_count_form_005fform_005f0))
@@ -165,6 +164,17 @@ public final class task_jsp extends org.apache.jasper.runtime.HttpJspBase
           out.write("</td>\n");
           out.write("        <td>");
           if (_jspx_meth_form_005finput_005f5(_jspx_th_form_005fform_005f0, _jspx_page_context, _jspx_push_body_count_form_005fform_005f0))
+            return true;
+          out.write("</td>\n");
+          out.write("    </tr>\n");
+          out.write("    \n");
+          out.write("    <tr>\n");
+          out.write("        <td>");
+          if (_jspx_meth_form_005flabel_005f6(_jspx_th_form_005fform_005f0, _jspx_page_context, _jspx_push_body_count_form_005fform_005f0))
+            return true;
+          out.write("</td>\n");
+          out.write("        <td>");
+          if (_jspx_meth_form_005finput_005f6(_jspx_th_form_005fform_005f0, _jspx_page_context, _jspx_push_body_count_form_005fform_005f0))
             return true;
           out.write("</td>\n");
           out.write("    </tr>\n");
@@ -515,14 +525,14 @@ public final class task_jsp extends org.apache.jasper.runtime.HttpJspBase
     org.springframework.web.servlet.tags.form.LabelTag _jspx_th_form_005flabel_005f5 = (org.springframework.web.servlet.tags.form.LabelTag) _005fjspx_005ftagPool_005fform_005flabel_0026_005fpath.get(org.springframework.web.servlet.tags.form.LabelTag.class);
     _jspx_th_form_005flabel_005f5.setPageContext(_jspx_page_context);
     _jspx_th_form_005flabel_005f5.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_form_005fform_005f0);
-    // /WEB-INF/pages/task.jsp(33,12) name = path type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-    _jspx_th_form_005flabel_005f5.setPath("title");
+    // /WEB-INF/pages/task.jsp(32,12) name = path type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    _jspx_th_form_005flabel_005f5.setPath("status");
     int[] _jspx_push_body_count_form_005flabel_005f5 = new int[] { 0 };
     try {
       int _jspx_eval_form_005flabel_005f5 = _jspx_th_form_005flabel_005f5.doStartTag();
       if (_jspx_eval_form_005flabel_005f5 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
         do {
-          out.write("assignTo");
+          out.write("Status(\"todo\",\"wip\",\"done\")");
           int evalDoAfterBody = _jspx_th_form_005flabel_005f5.doAfterBody();
           if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
             break;
@@ -550,8 +560,8 @@ public final class task_jsp extends org.apache.jasper.runtime.HttpJspBase
     org.springframework.web.servlet.tags.form.InputTag _jspx_th_form_005finput_005f5 = (org.springframework.web.servlet.tags.form.InputTag) _005fjspx_005ftagPool_005fform_005finput_0026_005fpath_005fnobody.get(org.springframework.web.servlet.tags.form.InputTag.class);
     _jspx_th_form_005finput_005f5.setPageContext(_jspx_page_context);
     _jspx_th_form_005finput_005f5.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_form_005fform_005f0);
-    // /WEB-INF/pages/task.jsp(34,12) name = path type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
-    _jspx_th_form_005finput_005f5.setPath("title");
+    // /WEB-INF/pages/task.jsp(33,12) name = path type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    _jspx_th_form_005finput_005f5.setPath("status");
     int[] _jspx_push_body_count_form_005finput_005f5 = new int[] { 0 };
     try {
       int _jspx_eval_form_005finput_005f5 = _jspx_th_form_005finput_005f5.doStartTag();
@@ -565,6 +575,68 @@ public final class task_jsp extends org.apache.jasper.runtime.HttpJspBase
     } finally {
       _jspx_th_form_005finput_005f5.doFinally();
       _005fjspx_005ftagPool_005fform_005finput_0026_005fpath_005fnobody.reuse(_jspx_th_form_005finput_005f5);
+    }
+    return false;
+  }
+
+  private boolean _jspx_meth_form_005flabel_005f6(javax.servlet.jsp.tagext.JspTag _jspx_th_form_005fform_005f0, PageContext _jspx_page_context, int[] _jspx_push_body_count_form_005fform_005f0)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  form:label
+    org.springframework.web.servlet.tags.form.LabelTag _jspx_th_form_005flabel_005f6 = (org.springframework.web.servlet.tags.form.LabelTag) _005fjspx_005ftagPool_005fform_005flabel_0026_005fpath.get(org.springframework.web.servlet.tags.form.LabelTag.class);
+    _jspx_th_form_005flabel_005f6.setPageContext(_jspx_page_context);
+    _jspx_th_form_005flabel_005f6.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_form_005fform_005f0);
+    // /WEB-INF/pages/task.jsp(37,12) name = path type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    _jspx_th_form_005flabel_005f6.setPath("assignTo");
+    int[] _jspx_push_body_count_form_005flabel_005f6 = new int[] { 0 };
+    try {
+      int _jspx_eval_form_005flabel_005f6 = _jspx_th_form_005flabel_005f6.doStartTag();
+      if (_jspx_eval_form_005flabel_005f6 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
+        do {
+          out.write("assignTo");
+          int evalDoAfterBody = _jspx_th_form_005flabel_005f6.doAfterBody();
+          if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
+            break;
+        } while (true);
+      }
+      if (_jspx_th_form_005flabel_005f6.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } catch (Throwable _jspx_exception) {
+      while (_jspx_push_body_count_form_005flabel_005f6[0]-- > 0)
+        out = _jspx_page_context.popBody();
+      _jspx_th_form_005flabel_005f6.doCatch(_jspx_exception);
+    } finally {
+      _jspx_th_form_005flabel_005f6.doFinally();
+      _005fjspx_005ftagPool_005fform_005flabel_0026_005fpath.reuse(_jspx_th_form_005flabel_005f6);
+    }
+    return false;
+  }
+
+  private boolean _jspx_meth_form_005finput_005f6(javax.servlet.jsp.tagext.JspTag _jspx_th_form_005fform_005f0, PageContext _jspx_page_context, int[] _jspx_push_body_count_form_005fform_005f0)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  form:input
+    org.springframework.web.servlet.tags.form.InputTag _jspx_th_form_005finput_005f6 = (org.springframework.web.servlet.tags.form.InputTag) _005fjspx_005ftagPool_005fform_005finput_0026_005fpath_005fnobody.get(org.springframework.web.servlet.tags.form.InputTag.class);
+    _jspx_th_form_005finput_005f6.setPageContext(_jspx_page_context);
+    _jspx_th_form_005finput_005f6.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_form_005fform_005f0);
+    // /WEB-INF/pages/task.jsp(38,12) name = path type = null reqTime = true required = true fragment = false deferredValue = false expectedTypeName = null deferredMethod = false methodSignature = null
+    _jspx_th_form_005finput_005f6.setPath("assignTo");
+    int[] _jspx_push_body_count_form_005finput_005f6 = new int[] { 0 };
+    try {
+      int _jspx_eval_form_005finput_005f6 = _jspx_th_form_005finput_005f6.doStartTag();
+      if (_jspx_th_form_005finput_005f6.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } catch (Throwable _jspx_exception) {
+      while (_jspx_push_body_count_form_005finput_005f6[0]-- > 0)
+        out = _jspx_page_context.popBody();
+      _jspx_th_form_005finput_005f6.doCatch(_jspx_exception);
+    } finally {
+      _jspx_th_form_005finput_005f6.doFinally();
+      _005fjspx_005ftagPool_005fform_005finput_0026_005fpath_005fnobody.reuse(_jspx_th_form_005finput_005f6);
     }
     return false;
   }

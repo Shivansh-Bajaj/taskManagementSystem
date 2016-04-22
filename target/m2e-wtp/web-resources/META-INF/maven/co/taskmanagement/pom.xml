@@ -47,7 +47,23 @@
            <version>4.1.4.RELEASE</version>
        </dependency>
         
-        
+        <dependency>
+    <groupId>org.webjars</groupId>
+    <artifactId>jquery</artifactId>
+    <version>2.1.1</version>
+</dependency>
+ 
+<dependency>
+    <groupId>org.webjars</groupId>
+    <artifactId>bootstrap</artifactId>
+    <version>3.2.0</version>
+    <exclusions>
+        <exclusion>
+            <groupId>org.webjars</groupId>
+            <artifactId>jquery</artifactId>
+        </exclusion>
+    </exclusions>
+</dependency>
  
        <!-- http://mvnrepository.com/artifact/org.springframework/spring-jdbc -->
        <dependency>

@@ -10,9 +10,9 @@ public class userDAOimpl implements userDAO {
 	@Autowired
 	DataSource myDataSource;
 	public void insertData(user User) {
-		String sql = "INSERT INTO t_User(user_Date,user_password,user_name,role) VALUES (?,?,?,?);";
+		String sql = "INSERT INTO t_User(user_Date,user_password,user_name,role,email,real_name) VALUES (?,?,?,?,?,?);";
         JdbcTemplate jdbcTemplate=new JdbcTemplate(myDataSource);
-        jdbcTemplate.update(sql, new Object[] { User.getDate(),User.getPassword(),User.getUser_name(),User.getRole()});
+        jdbcTemplate.update(sql, new Object[] { User.getDate(),User.getPassword(),User.getUser_name(),User.getRole(),User.getEmail(),User.getRealName()});
     
 	}
 
