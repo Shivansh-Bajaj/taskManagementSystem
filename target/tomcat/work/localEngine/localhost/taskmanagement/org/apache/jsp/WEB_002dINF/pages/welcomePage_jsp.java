@@ -63,8 +63,8 @@ public final class welcomePage_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("             <div class=\"page-header\" align=\"center\"> \n");
       out.write("                 <h1>Manage your projects</h1> \n");
       out.write("                 <p></p>\n");
-      out.write("             </div> <div align=\"center\" class=\"col-md-6\"><a href=\"Signup\"><button type=\"button\" class=\"btn btn-success\" >SignUp</button></a></div> \n");
-      out.write("             <div align=\"center\"  class=\"col-md-6\"> <a href=\"login\"><button type=\"button\" class=\"btn btn-info\">Login</button></a></div></div>\n");
+      out.write("             </div> <div align=\"center\" class=\"col-md-6\"><a href=\"/taskmanagement/Signup\"><button type=\"button\" class=\"btn btn-success\" >SignUp</button></a></div> \n");
+      out.write("             <div align=\"center\"  class=\"col-md-6\"> <a href=\"/taskmanagement/login\"><button type=\"button\" class=\"btn btn-info\">Login</button></a></div></div>\n");
       out.write("            \n");
       out.write("         </body> \n");
       out.write("         </html> ");

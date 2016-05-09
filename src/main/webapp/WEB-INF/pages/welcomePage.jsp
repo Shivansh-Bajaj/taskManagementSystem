@@ -13,8 +13,8 @@
              <div class="page-header" align="center"> 
                  <h1>Manage your projects</h1> 
                  <p></p>
-             </div> <div align="center" class="col-md-6"><a href="Signup"><button type="button" class="btn btn-success" >SignUp</button></a></div> 
-             <div align="center"  class="col-md-6"> <a href="login"><button type="button" class="btn btn-info">Login</button></a></div></div>
+             </div> <div align="center" class="col-md-6"><a href="/taskmanagement/Signup"><button type="button" class="btn btn-success" >SignUp</button></a></div> 
+             <div align="center"  class="col-md-6"> <a href="/taskmanagement/login"><button type="button" class="btn btn-info">Login</button></a></div></div>
             
          </body> 
          </html> 
